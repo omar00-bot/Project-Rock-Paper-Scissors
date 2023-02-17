@@ -62,3 +62,17 @@ p{
 .p2{
     justify-self:flex-end;
 }
+.choices{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+.choices>img{
+    width: 10%;
+}
+.result-paragraph{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
