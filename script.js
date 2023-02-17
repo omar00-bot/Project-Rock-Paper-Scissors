@@ -1,5 +1,4 @@
 const startBtn =document.querySelector(`.start`);
-const resetBtn =document.querySelector(`.reset-btn`);
 startBtn.addEventListener(`click`, game);
 
 function game(){
@@ -7,14 +6,18 @@ let playerScore = 0;
 let computerScore = 0;
 let movesLeft = 0
 startBtn.remove();
+
 const paragraphContainer = document.querySelector(`.result-paragraph`);
 const newParagraph = document.createElement(`p`);
 newParagraph.classList.add(`result-paragraph-text`);
 newParagraph.textContent = `Choose your choice below!`
 paragraphContainer.appendChild(newParagraph);
+
 const resultParagraph = document.querySelector(`.result`);
 resultParagraph.textContent = `Goodluck!`;
+
 const gameoverParagraph = document.querySelector(`.result-paragraph-text`);
+
 const rock = document.querySelector(`#rock`);
 const paper = document.querySelector(`#paper`);
 const scissor = document.querySelector(`#scissor`);
@@ -57,7 +60,7 @@ function playRound(playerSelection , computerSelection){
     gameoverParagraph.textContent = computerSelection.toLowerCase() +` beats ` +playerSelection.toLowerCase() +`.`;
     computerScore++;
   } else {
-    resultParagraph.textContent = `You Lose!, `;
+    resultParagraph.textContent = `You Win!, `;
     gameoverParagraph.textContent = computerSelection.toLowerCase() +` beats ` +playerSelection.toLowerCase() +`.`;
     playerScore++;
   }
@@ -79,9 +82,11 @@ function gameOver(){
   createResetBtn.classList.add(`reset-btn`)
   createResetBtn.textContent=`Reset`;
   resetContainer.appendChild(createResetBtn);
-  resetBtn.addEventListener(`click`,() => {
-    resetBtn.remove();
 
+  const resetBtn=document.querySelector(`.reset-btn`);
+  resetBtn.addEventListener(`click`,() => {
+  resetBtn.remove();
+  game()
   })
  }
 }
