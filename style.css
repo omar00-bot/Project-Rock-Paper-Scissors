@@ -39,10 +39,15 @@ p{
     border: 10px solid rgb(8, 109, 177);
     border-radius: 40px;
     flex: 1;
+    height: 80%;
+    width: 100%;
+    box-sizing: border-box
 }
-.giphy-embed{
+.giphy-embed-player.giphy-embed-compute{
     flex: 1;
     border-radius: 30px;
+    max-width: 100%;
+    max-height: 100%;
 }
 .image-player,.image-computer{
     display: flex;
@@ -54,6 +59,12 @@ p{
     flex-direction: column;
     text-align: center;
     justify-content: flex-end;
+}
+.ui-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .p1{
     margin-bottom: 70px;
