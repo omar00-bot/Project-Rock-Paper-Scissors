@@ -67,7 +67,8 @@ p{
     align-items: center;
 }
 .p1{
-    margin-bottom: 70px;
+    margin-top: auto;
+    margin-bottom: auto;
     font-size: 80px;
 }
 .p2{
