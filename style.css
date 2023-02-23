@@ -14,7 +14,7 @@ p{
 }
 .title>h1{
     font-family: 'Faster One', cursive;
-    font-size: 80px;
+    font-size: 90px;
     margin: 0;
 }
 .title>h3{
@@ -98,6 +98,7 @@ p{
     display: flex;
     justify-content: center;
     gap: 100px;
+    margin-top: 1rem;
 }
 .choices>img{
     width: 10%;
@@ -115,16 +116,36 @@ p{
 .rules>p{
     font-size: 20px;
 }
-button{
+.start-btn{
     font-size: 30px;
     padding: 0 3rem;
     border-radius: 30px;
     border: 2px solid blue;
 }
-.start:hover{
+.start-btn:hover{
     background-color: blue;
     color: white;
 }
-.result-paragraph-text{
-    font-size: 2rem;
+.reset-btn{
+    font-size: 30px;
+    padding: 0 3rem;
+    border-radius: 30px;
+    border: 2px solid red;
 }
+.reset-btn:hover{
+    background-color: red;
+    color: white;
+}
+.result-paragraph-text{
+    font-size: 1rem;
+}
+#rock,#paper,#scissor{
+    transition: 0.3s ease;
+}
+#rock:hover,#paper:hover,#scissor:hover{
+    -webkit-transform: scale(1.18);
+-ms-transform: scale(1.18);
+transform: scale(1.18);
+transition: 0.3s ease;
+}
+

@@ -1,4 +1,4 @@
-const startBtn =document.querySelector(`.start`);
+const startBtn =document.querySelector(`.start-btn`);
 startBtn.addEventListener(`click`, game);
 
 function game(){
@@ -59,8 +59,9 @@ playerOptions.forEach( (playerOptions) => {
 
 function playRound(playerSelection , computerSelection){
   if (playerSelection.toLowerCase() === computerSelection.toLowerCase()) {
-    resultParagraph.textContent = `Its a Draw!`
-    gameoverParagraph.textContent = `No winner in this round`
+    resultParagraph.textContent = `Its a Draw!`;
+    resultParagraph.style.color = `black`;
+    gameoverParagraph.textContent = `No winner in this round`;
   } else if (
     (playerSelection.toLowerCase() === `rock` &&
       computerSelection.toLowerCase() === `paper`) ||
@@ -70,28 +71,30 @@ function playRound(playerSelection , computerSelection){
       computerSelection.toLowerCase() === `rock`)
   ) {
     resultParagraph.textContent = `You Lose!`;
-    gameoverParagraph.textContent = computerSelection.toLowerCase() +` beats ` +playerSelection.toLowerCase() +`.`;
+    resultParagraph.style.color = `red`;
+    gameoverParagraph.textContent = computerSelection.charAt(0).toUpperCase()+computerSelection.slice(1) +` beats ` +playerSelection.toLowerCase() +`.`;
     computerScore++;
   } else {
     resultParagraph.textContent = `You Win!`;
-    gameoverParagraph.textContent = computerSelection.toLowerCase() +` beats ` +playerSelection.toLowerCase() +`.`;
+    resultParagraph.style.color = `blue`;
+    gameoverParagraph.textContent = playerSelection.charAt(0).toUpperCase()+playerSelection.slice(1) +` beats ` +computerSelection.toLowerCase() +`.`;
     playerScore++;
   }
 }
 
 function gameOver(){
   if(playerScore>computerScore){
-    gameoverParagraph.textContent = `Game Over! You Win!`;
+    gameoverParagraph.textContent = `Game Over!`;
     reset();
   }
   else {
-    gameoverParagraph.textContent = `Game Over! You Lose!`;
+    gameoverParagraph.textContent = `Game Over!`;
     reset();
   }
 }
  function reset(){
-  paragraphContainer.remove();
   choiceContainer.remove();
+  
   const createResetBtn = document.createElement(`button`);
   createResetBtn.classList.add(`reset-btn`)
   createResetBtn.textContent=`Reset`;
