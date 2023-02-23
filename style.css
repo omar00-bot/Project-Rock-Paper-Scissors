@@ -1,3 +1,9 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  background-color: #B5F1CC;
+  font-family: 'Kosugi Maru', sans-serif;
+}
 p{
     margin: 0;
 }
@@ -7,11 +13,14 @@ p{
     align-items: center;
 }
 .title>h1{
+    font-family: 'Faster One', cursive;
     font-size: 80px;
     margin: 0;
 }
 .title>h3{
     margin: 0;
+    font-family: 'Gajraj One', cursive;
+    font-size: 30px;
 }
 .moves-left{
     display: flex;
@@ -41,7 +50,8 @@ p{
     flex: 1;
     height: 80%;
     width: 100%;
-    box-sizing: border-box
+    box-sizing: border-box;
+    background-color: rgb(101, 194, 236);
 }
 .giphy-embed-player.giphy-embed-compute{
     flex: 1;
@@ -49,10 +59,19 @@ p{
     max-width: 100%;
     max-height: 100%;
 }
-.image-player,.image-computer{
+.player-score-counter,.computer-score-counter{
+    font-size: 30px;
+
+}
+.image-score{
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 5%;
+}
+.image-score>p{
+    font-weight: bold;
+    font-size: 30px;
 }
 .image-middle{
     display: flex;
@@ -70,6 +89,7 @@ p{
     margin-top: auto;
     margin-bottom: auto;
     font-size: 80px;
+    font-family: 'Knewave', cursive;
 }
 .p2{
     justify-self:flex-end;
@@ -82,9 +102,29 @@ p{
 .choices>img{
     width: 10%;
 }
+.result{
+    font-size: 40px;
+    font-weight: 600;
+}
 .result-paragraph{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40px;
+    height: 50px;
+}
+.rules>p{
+    font-size: 20px;
+}
+button{
+    font-size: 30px;
+    padding: 0 3rem;
+    border-radius: 30px;
+    border: 2px solid blue;
+}
+.start:hover{
+    background-color: blue;
+    color: white;
+}
+.result-paragraph-text{
+    font-size: 2rem;
 }

@@ -99,7 +99,7 @@ function gameOver(){
 
   const resetBtn=document.querySelector(`.reset-btn`);
   resetBtn.addEventListener(`click`,() => {
-    location.reload();
+    document.location.reload();
     })
  }
 }
