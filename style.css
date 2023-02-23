@@ -98,7 +98,7 @@ p{
     display: flex;
     justify-content: center;
     gap: 100px;
-    margin-top: 1rem;
+    margin: 1rem auto;
 }
 .choices>img{
     width: 10%;
@@ -147,5 +147,15 @@ p{
 -ms-transform: scale(1.18);
 transform: scale(1.18);
 transition: 0.3s ease;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer>a{
+    text-decoration: none;
+    color: black;
 }
 
