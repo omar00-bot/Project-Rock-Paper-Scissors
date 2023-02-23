@@ -30,9 +30,9 @@ const playerOptions = [rock,paper,scissor];
 
 playerOptions.forEach( (playerOptions) => {
   playerOptions.addEventListener(`click` , function(){
-    const rockLocation = "/giphy-rock.gif";
-    const paperLocation = "/paper.gif";
-    const scissorLocation = "/scissor.gif";
+    const rockLocation = "giphy-rock.gif";
+    const paperLocation = "paper.gif";
+    const scissorLocation = "scissor.gif";
     function getComputerChoice() {
       const pick = Math.floor(Math.random() * 3);
       choices = ["rock", "paper", "scissor"];
