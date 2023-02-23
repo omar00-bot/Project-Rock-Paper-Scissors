@@ -10,7 +10,7 @@ Learnings:
 - Conditionals
 - Loops
 - DOM manipulation
-- Using branch in githubS
+- Using branch in github
 
 The first version is included in the repo (index-v1.html). This version is the simple representation of the game and is only playeable using console.
 
